@@ -203,6 +203,7 @@ def delete(id):
     return redirect(url_for('profile'))
 
 
+# ФУНКЦИЯ НЕ ГОТОВА
 @app.route('/profile/user_id')
 @login_required
 def someones_profile(user_id):

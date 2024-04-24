@@ -101,6 +101,7 @@ class dbsession:
         except sqlite3.Error as e:
             print("Ошибка БД" + str(e))
 
+    # ФУНКЦИЯ НЕ ГОТОВА
     def change_profile(self, user_id, name, status, city, about):
         try:
             self.cur.execute(f"UPDATE users SET name = '{name}', status = '{status}', "
@@ -117,4 +118,3 @@ class dbsession:
             self.db.commit()
         except sqlite3.Error as e:
             print("Ошибка БД" + str(e))
-
