@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h1 class="headline">Вход</h1>
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+<form action="" method="post" class="text-field">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.email.label() }}
+        {% if form.email.errors %}
+        {{ form.email(class="invalid") }}
+        <span class="invalid-feedback">
+      {% for e in form.email.errors %}
+        {{ e }}
+      {% endfor %}
+    </span>
+        {% else %}
+        {{ form.email() }}
+        {% endif %}
+    </p>
+    <p>
+        {{ form.password.label() }}
+        {% if form.password.errors %}
+        {{ form.password(class="invalid") }}
+        <span class="invalid-feedback">
+      {% for e in form.password.errors %}
+        {{ e }}
+      {% endfor %}
+    </span>
+        {% else %}
+        {{ form.password() }}
+        {% endif %}
+    </p>
+    <p>{{ form.remember.label() }} {{ form.remember() }}
+    <p>{{ form.submit() }}
+    <hr align=left width="100%">
+    <p><a href="{{url_for('register')}}">Регистрация</a>
+</form>
+{% endblock %}

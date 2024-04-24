@@ -1,0 +1,169 @@
+html, body {
+	font-family: 'Arial';
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	color: #0059b2;
+	text-decoration: none;
+}
+a:hover {
+	color: #CC0000;
+	text-decoration: underline;
+}
+
+.clear {clear: both;}
+
+ul.mainmenu {
+	list-style: none;
+	background: #ffa500;
+	height: 60px;
+	margin: 0px;
+	padding: 5px;
+	color: #fdc073;
+	font-size: 30px;
+	overflow: hidden;
+}
+ul.mainmenu li {
+	float: left;
+	margin: 15px 40px 0 50px;
+}
+ul.mainmenu li.last {float: right;}
+
+ul.mainmenu li a {
+	color: #000000;
+	text-decoration: none;
+}
+ul.mainmenu li a:hover {
+	color: #fff;
+}
+
+div.content {
+	margin: 10px;
+}
+
+.text-field {
+  margin-bottom: 1rem;
+}
+
+.text-field label {
+    text-align: center;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 20px;
+}
+
+.text-field input {
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    margin-left: 24%;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #c4ffe3;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+}
+.form-contact .invalid {
+    background: #FF9898
+}
+.form-contact .invalid-feedback {
+    background: #CC0000
+}
+
+.flash {padding: 10px;}
+.flash.success {
+	border: 1px solid #21DB56;
+	background: #AEFFC5;
+}
+.flash.error {
+	border: 1px solid #FF4343;
+	background: #FF9C9C;
+}
+
+.profile-ava {
+	width: 130px;
+	text-align: center;
+	overflow: hidden;
+	background: #eee;
+	padding: 10px;
+}
+.profile-ava img {max-width: 130px; height: auto;}
+
+.profile-load {
+	margin-top: 10px;
+	overflow: hidden;
+	max-width: 150px;
+}
+.profile-load input[type=submit], input[type=file] {
+	width: 100%;
+	font-size: 18px;
+}
+.profile-load p {
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+
+.profile-panel {padding: 0 0 0 10px;}
+ul.profile-info {
+	list-style: none;
+	margin: 10px 0 0 0;
+	padding: 0;
+	color: #7E652F;
+}
+ul.profile-info li {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.headline {
+    text-align: center;
+    font-size: 40;
+    list-style: none;
+	background: #aaf559;
+	height: 40px;
+	padding: 5px;
+}
+.main {
+    margin-left: 10%;
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 40px;
+}
+
+.main_t {
+    width: 45%;
+    height: 180px;
+    margin-bottom: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #c4ffe3;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.subm {
+	width: 300px;
+	height: 45px;
+	font-size: 30px;
+}
+
+.post {
+    margin-left: 2%;
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 30px;
+}

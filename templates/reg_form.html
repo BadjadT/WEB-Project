@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h1 class="headline">Регистрация</h1>
+{% for cat, msg in get_flashed_messages(True) %}
+<div class="flash {{cat}}">{{msg}}</div>
+{% endfor %}
+<form action="/register" method="post" class="text-field">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.name.label() }}
+        {% if form.name.errors %}
+        {{ form.name(class="invalid") }}
+        <span class="invalid-feedback">
+      {% for e in form.name.errors %}
+        {{ e }}
+      {% endfor %}
+    </span>
+        {% else %}
+        {{ form.name() }}
+        {% endif %}
+    </p>
+    <p>
+        {{ form.email.label() }}
+        {% if form.email.errors %}
+        {{ form.email(class="invalid") }}
+        <span class="invalid-feedback">
+      {% for e in form.email.errors %}
+        {{ e }}
+      {% endfor %}
+    </span>
+        {% else %}
+        {{ form.email() }}
+        {% endif %}
+    </p>
+    <p>
+        {{ form.password.label() }}
+        {% if form.password.errors %}
+        {{ form.password(class="invalid") }}
+        <span class="invalid-feedback">
+      {% for e in form.password.errors %}
+        {{ e }}
+      {% endfor %}
+    </span>
+        {% else %}
+        {{ form.password() }}
+        {% endif %}
+    </p>
+    <p>
+        {{ form.password2.label() }}
+        {% if form.password2.errors %}
+        {{ form.password2(class="invalid") }}
+        <span class="invalid-feedback">
+      {% for e in form.password2.errors %}
+        {{ e }}
+      {% endfor %}
+    </span>
+        {% else %}
+        {{ form.password2() }}
+        {% endif %}
+    </p>
+    <p>{{ form.remember.label() }} {{ form.remember() }}
+    <p><input type="submit" value="Регистрация"/>
+    <hr align=left width="100%">
+    <p><a href="{{url_for('login')}}">Вход</a>
+</form>
+{% endblock %}
