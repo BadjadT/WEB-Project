@@ -38,6 +38,21 @@ class dbsession:
 
     def getUser(self, user_id):
         try:
+            self.cur.execute(f'SELECT * FROM users WHERE id = {user_id} LIMIT 1')
+            res = self.cur.fetchone()
+            if not res:
+                print('Пользователь не найден')
+                return False
+
+            return res
+        except sqlite3.Error as e:
+            print('Ошибка БД' + str(e))
+
+        return False
+
+
+    def get_user_i(self, user_id):
+        try:
             self.cur.execute(f'SELECT * FROM users WHERE id = {user_id}')
             res = self.cur.fetchall()
             if not res:
@@ -49,6 +64,7 @@ class dbsession:
             print('Ошибка БД' + str(e))
 
         return False
+
 
     def getUserByEmail(self, email):
         try:

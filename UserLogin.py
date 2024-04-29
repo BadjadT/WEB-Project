@@ -18,31 +18,13 @@ class UserLogin(UserMixin):
         if self.user:
             return self.user['name']
         else:
-            "NoName"
+            return False
 
     def getMail(self):
         if self.user:
             return self.user['email']
         else:
-            "NoMail"
-
-    def getStatus(self):
-        if self.user:
-            return self.user['status']
-        else:
-            "NoStatus"
-
-    def getCity(self):
-        if self.user:
-            return self.user['email']
-        else:
-            "No city"
-
-    def getInfo(self):
-        if self.user:
-            return self.user['email']
-        else:
-            "NoMail"
+            return False
 
     def getAvatar(self, app):
         img = None

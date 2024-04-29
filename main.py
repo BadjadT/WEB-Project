@@ -145,7 +145,7 @@ def profile():
     posts = dbase.get_posts(current_user.get_id())
     User_id = current_user.get_id()
     return render_template('profile.html', lmenu=lmenu, menu=menu,
-                           title=f'Профиль ', posts=posts, user_id=User_id)
+                           title='Профиль', posts=posts, user_id=User_id)
 
 
 @app.route('/delete_profile')
@@ -204,11 +204,11 @@ def delete(id):
 
 
 # ФУНКЦИЯ НЕ ГОТОВА
-@app.route('/profile/user_id')
+@app.route('/sprofile/id')
 @login_required
-def someones_profile(user_id):
-    user = dbase.getUser(user_id)
-    posts = dbase.get_posts(current_user.get_id())
+def sprofile(id):
+    user = dbase.get_user_i(id)
+    posts = dbase.get_posts(id)
     return render_template('someones_profile.html', lmenu=lmenu, menu=menu,
                            title=f'Профиль', posts=posts, user=user)
 
